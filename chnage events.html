@@ -1,0 +1,17 @@
+<html>
+<body>
+<input type="text" placeholder="Type something here, then click outside of the field." size="50">
+<p id="log"></p>
+<script>
+let input = document.querySelector('input');
+let log = document.getElementById('log');
+
+input.onchange = handleChange;
+
+function handleChange(e) {
+  log.textContent = `The field's value is
+      ${e.target.value.length} character(s) long.`;
+}
+</script>
+</body>
+</html>
